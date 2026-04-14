@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image representation and extraction.md",
+                "file": "Lyapunov Exponent.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Image representation and extraction"
+              "title": "Lyapunov Exponent"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Percepção de Profundidade.md",
+                "file": "Untitled.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Percepção de Profundidade"
+              "title": "Backlinks for Untitled"
             }
           },
           {
@@ -185,9 +185,11 @@
   },
   "active": "b1aa3b5030f17aa9",
   "lastOpenFiles": [
+    "Untitled.canvas",
+    "Untitled.base",
+    "Image representation and extraction.md",
     "Local Binary Patterns.md",
     "Extração de Caracteristicas de Áudio.md",
-    "Image representation and extraction.md",
     "Moments.md",
     "Lyapunov Exponent.md",
     "Reconhecimento De Fala.md",
@@ -197,9 +199,7 @@
     "Percepção de Profundidade.md",
     "Percepção do Movimento.md",
     "Optical flow.md",
-    "Untitled.canvas",
     "Projeto.md",
-    "Untitled.base",
     "Revisão.md",
     "Pasted image 20260203173404.png",
     "Pasted image 20260213152851.png",

@@ -8,12 +8,12 @@ Outros programas podem ser necessários para que a linguagem seja processada cor
 **Pré-processadores**: realiza o preprocessamento, como fetch de dados em outros arquivos (bibliotecas, classes etc) e pode criar macros.
 **Assembler**:  Monta o código em assembly.
 **Linker & Loader**: Editor de ligação e carregador, aloca e carrega o código na memória.
-### A estrutura de um compliadores
+### A estrutura de um compiladores
 A tarefa de um compilador pode ser divida em duas etapas básicas **Análise**, **Síntese**
 A **análise** quebra o programa fonte em pedaços e lhe impõe uma estrutura gramátical, a partir da qual cria uma representação intermediária.
 A **síntese** produz o programa destino.
 #### Fases de um compilador
-(_Fluxo de caracteres_) -> **Análisador léxico** ---> (_Fluxo de tokens_) -> **Analísador Sintático** ----> (_Árvore Síntatica_) -> **Análisador Semântico** ---> (_Árvore Síntatica_) -> **Gerador de Código Intermediário**  ---> (Representação intermediário) -> **Otimizador de código independente** ---> (Representação intermediária) -> **Gerador de código** ---> (Código de máquina destino) -> **Otimizador de Código Dependente de Maquina**
+(_Fluxo de caracteres_) -> **Analisador léxico** ---> (_Fluxo de tokens_) -> **Analisador Sintático** ----> (_Árvore Sintática_) -> **Analisador Semântico** ---> (_Árvore Sintática_) -> **Gerador de Código Intermediário**  ---> (Representação intermediário) -> **Otimizador de código independente** ---> (Representação intermediária) -> **Gerador de código** ---> (Código de máquina destino) -> **Otimizador de Código Dependente de Maquina**
 ##### Análise léxica
 Primeira fase do compilador, recebe como fluxo de entrada de caracteres do programa de entrada e os agrupa em lexemas, que são sequências significativas de caracteres. Para cada lexema, o analisador léxico produz como saída um token (**<--- questão de prova**) na forma:
 						(nome do token, **valor**)
@@ -27,7 +27,7 @@ Para lexemas de palavras reservadas como while, pode-se reduzir <while, while> p
 ##### Análise sintática
 A análise léxica gera uma árvore baseado numa gramática livre de contexto
 ##### Análise Semântica
-Checa a consistência semântica do programa fonte a partir da árvore sintática e da tabela de símbolos, além de checagens adicionbais sobre a sintaxe da linguagem.
+Checa a consistência semântica do programa fonte a partir da árvore sintática e da tabela de símbolos, além de checagens adicionais sobre a sintaxe da linguagem.
 #### Tabela de símbolos
 Estrutura de dados que permite guardar informações sobre as entidades do programa fonte:
 - Nome
