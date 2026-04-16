@@ -2,7 +2,7 @@ Todo software deve ser escrito em uma linguagem de programação, esse software 
 ### Processadores de linguagens
 O **compilador** traduz um programa escrito em uma linguagem, para outro programa escrito numa linguagem compreendida por um arquitetura de um computador. Caso seja encontrado algum erro durante esse processo, ele é relatado pelo compilador.
 Um **interpretador** é outro tipo de processador de linguagem, ao contrário de produzir um programa destino como resultado de uma tradução, ele é outro programa que entende o original, ou seja, não realiza a tradução.
-**Just-in-time compilers** (JIT) são uma abordagem híbrida que traduz o código enquanto o código original executa.
+**Just-in-time compilers** (JIT) são uma abordagem híbrida que traduz o código enquanto o código original executa. Tarefas custosas, como análise do código fonte, são realizadas na compilação para a representação intermediária.
 
 Outros programas podem ser necessários para que a linguagem seja processada corretamente, como por exemplo:
 **Pré-processadores**: realiza o preprocessamento, como fetch de dados em outros arquivos (bibliotecas, classes etc) e pode criar macros.
@@ -10,7 +10,7 @@ Outros programas podem ser necessários para que a linguagem seja processada cor
 **Linker & Loader**: Editor de ligação e carregador, aloca e carrega o código na memória.
 ### A estrutura de um compiladores
 A tarefa de um compilador pode ser divida em duas etapas básicas **Análise**, **Síntese**
-A **análise** quebra o programa fonte em pedaços e lhe impõe uma estrutura gramátical, a partir da qual cria uma representação intermediária.
+A **análise** quebra o programa fonte em pedaços e lhe impõe uma estrutura gramatical, a partir da qual cria uma representação intermediária.
 A **síntese** produz o programa destino.
 #### Fases de um compilador
 (_Fluxo de caracteres_) -> **Analisador léxico** ---> (_Fluxo de tokens_) -> **Analisador Sintático** ----> (_Árvore Sintática_) -> **Analisador Semântico** ---> (_Árvore Sintática_) -> **Gerador de Código Intermediário**  ---> (Representação intermediário) -> **Otimizador de código independente** ---> (Representação intermediária) -> **Gerador de código** ---> (Código de máquina destino) -> **Otimizador de Código Dependente de Maquina**
