@@ -63,3 +63,58 @@ exemplo: Números sem sinal
 		fracaoOpcional --> digitos | $\epsilon$
 		expoenteOpcional --> (E(+|-) digitos) | $\epsilon$
 		numero --> digitos fracaoOpcional expoenteOpcional
+### Reconhecimento de Tokens
+É preciso construir um trecho de código que examine a cadeia de entrada e encontrar um prefixo que seja um lexema casando com um dos padrões.
+		stmt --> if (exp) then stmt
+				 if (exp) then stmt else stmt
+				 $\epsilon$
+		 exp --> term relop term
+				 term
+		 term --> id
+				 number
+Padrões para esses tokens são descritos através de expressões regulares.
+Padrões são convertidos em fluxogramas estilizados, chamados **diagramas de transição**, que possuem arestas direcionadas e rotuladas. Consideramos que todos os diagramas de transição são deterministas.
+#### Diagramas de transição
+Existem duas formas para lidar com palavras reservadas parecidas com identificadores
+1. Cadastro de palavras reservadas na tabela de símbolos
+2. Diagramas de transição separados para cada palavra reservada
+#### Analisador Léxico baseado em diagrama de transição
+Existem diferentes formas de usar uma coleção de diagramas de transição para construir um analisador léxico. Onde cada estado é representado por um trecho de código, com uma variável state contendo o número do estado corrente e uma variável switch baseado no valor do state.
+A forma mais comum de se codificar um analisador léxico é combinar todos os diagramas em um.
+```java
+TOKEN getRelop(){
+	TOKEN retToken = new (RELOP);
+	while(1){
+		switch(state) {
+			case 0: c = nextChar();
+				if (c == ‘<‘) state = 1;
+				else if (c == ‘=‘) state = 5;
+				else if (c == ‘>‘) state = 6;
+				else fail();
+				break;
+			case 1: ...
+			...
+			case 8: retract();
+		retToken.attribute = GT;
+		return(retToken);
+		}
+	}
+}
+```
+
+### Autômatos finitos
+São grafos semelhates aos diagramas de transição, podendo ser de 2 tipos: Não deterministas e deterministas (NFA e DFA)
+#### NFA
+Um NFA consiste em um conjunto finito de estados S, um conjunto de símbolos de entradas $\Sigma$, um estado $s_0$ considerado o estado inicial e um subconjunto de estados $F$ finais.
+Pode-se representar um NFA por um digrafo e por uma tabela de transição.
+Um NFA aceita uma cadeia de entrada $x$ se houver algum caminho no grafo de transição do estado inicial para um estado final, de modo que todas as transições comportem $x$
+#### DFA
+Um DFA é um caso especial de NFA, onde não existem movimentos sob a entrada $\epsilon$ e para cada estado $s$ e símbolo de entrada $a$, existe exatamente uma aresta possível
+#### Algoritmo MCNaughton-Yamada-Thompson
+Um algoritmo composicional que recebe como entrada uma expressão regular $r$ sob o alfabeto $\Sigma$ e retorna um NFA $N$ aceitando $L(r)$.
+Comece desmembrando $r$ em suas subexpressões constituintes, então aplique as regras BASE e de INDUÇÃO.
+* BASE: para qualquer subexpressão $a$ em  $\Sigma$ e para a expressão $\epsilon$, construa o NFA
+* INDUÇÃO: suponha que $N(s)$ e $N(t)$ sejam NFAs para as expressões regulares $s$ e $t$, respectivamente
+	1.  Considere $r = s|t$, então, $N(t)$ é construído da seguinte forma:![[Pasted image 20260422111343.png]]
+	2. Considere $r = st$, então, $N(t)$ é construído da seguinte forma: ![[Pasted image 20260422111459.png]]
+	3. .  Considere $r = s*$, então, $N(s)$ é construído da seguinte forma:![[Pasted image 20260422111639.png]]

@@ -1,28 +1,14 @@
 {
   "main": {
-    "id": "91c4c01d1404520b",
+    "id": "120dd8bb75a6785c",
     "type": "split",
     "children": [
       {
-        "id": "1529a0678b99d1b5",
+        "id": "be28c0e6a6304d70",
         "type": "tabs",
         "children": [
           {
-            "id": "9b9bba0a888a8643",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Análise Léxica.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Análise Léxica"
-            }
-          },
-          {
-            "id": "a895cb65df51fc1f",
+            "id": "5f1a20d49c0650ad",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -41,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "1a85d1b301ac66b3",
+    "id": "3aeb0de8a098abd9",
     "type": "split",
     "children": [
       {
-        "id": "0ba5837a376f41e9",
+        "id": "816f1617dc963d24",
         "type": "tabs",
         "children": [
           {
-            "id": "9f6607b1c3f6337c",
+            "id": "5435fed40f748848",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -62,7 +48,7 @@
             }
           },
           {
-            "id": "e6255adbb635b3dd",
+            "id": "b3a332d3e9b2f961",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -79,7 +65,7 @@
             }
           },
           {
-            "id": "34ea7b549274b161",
+            "id": "148ee00f90919274",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -95,20 +81,20 @@
     "width": 300
   },
   "right": {
-    "id": "0e8dcec70355ee94",
+    "id": "cb2a7567cabeb809",
     "type": "split",
     "children": [
       {
-        "id": "4762819ef7ba150b",
+        "id": "655715f38a41a306",
         "type": "tabs",
         "children": [
           {
-            "id": "3aec4c0574f63636",
+            "id": "e51fd8a28965142d",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Análise Léxica.md",
+                "file": "Introdução.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,11 +104,11 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Análise Léxica"
+              "title": "Backlinks for Introdução"
             }
           },
           {
-            "id": "079075d0b897b38c",
+            "id": "d494a8bb98c7a42b",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -136,7 +122,7 @@
             }
           },
           {
-            "id": "98cda34c8046027e",
+            "id": "9cc6662626073e1c",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -151,7 +137,7 @@
             }
           },
           {
-            "id": "3add0bae0e9ff33b",
+            "id": "859ec0754ae3b832",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -165,7 +151,7 @@
             }
           },
           {
-            "id": "cd9fa27bac610a4d",
+            "id": "8ba9a6e6cf1f0d82",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -197,16 +183,8 @@
       "bases:Create new base": false
     }
   },
-  "active": "9b9bba0a888a8643",
+  "active": "5f1a20d49c0650ad",
   "lastOpenFiles": [
-    "Pasted image 20260422111639.png",
-    "Pasted image 20260422111459.png",
-    "Pasted image 20260422111343.png",
-    "Introdução.md",
-    "Análise Léxica.md",
-    "Pasted image 20260415112602.png",
-    "Pasted image 20260415112228.png",
-    "2026-04-15.md",
-    "2026-04-14.md"
+    "Introdução.md"
   ]
 }
