@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Intro.md",
+                "file": "Intro to Neural Nets.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Intro"
+              "title": "Intro to Neural Nets"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Intro.md",
+                "file": "Intro to Neural Nets.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Intro"
+              "title": "Backlinks for Intro to Neural Nets"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Intro.md",
+                "file": "Intro to Neural Nets.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Intro"
+              "title": "Outgoing links from Intro to Neural Nets"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Intro.md",
+                "file": "Intro to Neural Nets.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Intro"
+              "title": "Outline of Intro to Neural Nets"
             }
           }
         ]
@@ -185,6 +185,6 @@
   },
   "active": "0c3e22c93ddc1fc1",
   "lastOpenFiles": [
-    "Intro.md"
+    "Intro to Neural Nets.md"
   ]
 }
