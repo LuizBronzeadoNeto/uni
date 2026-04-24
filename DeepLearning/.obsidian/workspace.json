@@ -1,24 +1,24 @@
 {
   "main": {
-    "id": "120dd8bb75a6785c",
+    "id": "d438b10530fb5cae",
     "type": "split",
     "children": [
       {
-        "id": "be28c0e6a6304d70",
+        "id": "bfd7a225de87106e",
         "type": "tabs",
         "children": [
           {
-            "id": "5a25b70a7a30c54b",
+            "id": "0c3e22c93ddc1fc1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tipos de Dados.md",
+                "file": "Intro.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tipos de Dados"
+              "title": "Intro"
             }
           }
         ]
@@ -27,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "3aeb0de8a098abd9",
+    "id": "3a73a790965426b5",
     "type": "split",
     "children": [
       {
-        "id": "816f1617dc963d24",
+        "id": "dcf0c8614bb259b7",
         "type": "tabs",
         "children": [
           {
-            "id": "5435fed40f748848",
+            "id": "653d996e067db649",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +48,7 @@
             }
           },
           {
-            "id": "b3a332d3e9b2f961",
+            "id": "803f458f01eed17d",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +65,7 @@
             }
           },
           {
-            "id": "148ee00f90919274",
+            "id": "a5fd928d39b0d9aa",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -81,20 +81,20 @@
     "width": 300
   },
   "right": {
-    "id": "cb2a7567cabeb809",
+    "id": "e1ebe5766f9c898d",
     "type": "split",
     "children": [
       {
-        "id": "655715f38a41a306",
+        "id": "fae951c068411c6e",
         "type": "tabs",
         "children": [
           {
-            "id": "e51fd8a28965142d",
+            "id": "bc4ea95c98d005ee",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tipos de Dados.md",
+                "file": "Intro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,25 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Tipos de Dados"
+              "title": "Backlinks for Intro"
             }
           },
           {
-            "id": "d494a8bb98c7a42b",
+            "id": "3c0aea3f13ab2070",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Introdução.md",
+                "file": "Intro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Introdução"
+              "title": "Outgoing links from Intro"
             }
           },
           {
-            "id": "9cc6662626073e1c",
+            "id": "88a0662cd042fb59",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -137,7 +137,7 @@
             }
           },
           {
-            "id": "859ec0754ae3b832",
+            "id": "d26d11337f04cb2c",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -151,18 +151,18 @@
             }
           },
           {
-            "id": "8ba9a6e6cf1f0d82",
+            "id": "2a130b7b573018fc",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Introdução.md",
+                "file": "Intro.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Introdução"
+              "title": "Outline of Intro"
             }
           }
         ]
@@ -183,9 +183,8 @@
       "bases:Create new base": false
     }
   },
-  "active": "5a25b70a7a30c54b",
+  "active": "0c3e22c93ddc1fc1",
   "lastOpenFiles": [
-    "Introdução.md",
-    "Tipos de Dados.md"
+    "Intro.md"
   ]
 }
