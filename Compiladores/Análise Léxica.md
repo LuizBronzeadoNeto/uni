@@ -118,3 +118,32 @@ Comece desmembrando $r$ em suas subexpressões constituintes, então aplique as 
 	1.  Considere $r = s|t$, então, $N(t)$ é construído da seguinte forma:![[Pasted image 20260422111343.png]]
 	2. Considere $r = st$, então, $N(t)$ é construído da seguinte forma: ![[Pasted image 20260422111459.png]]
 	3. .  Considere $r = s*$, então, $N(s)$ é construído da seguinte forma:![[Pasted image 20260422111639.png]]
+#### DFAs a partir de expressões regulares
+Sabe-se que é possível transformar uma expressão regular em um autômato não determinista, logo, para transforma-la em um NFA, é preciso transformar esse DFA para um DFA
+##### Construção de subconjuntos de um DFA a partir de um NFA
+Operações sobre estados do NFA:
+* $\epsilon$-closure(s) - conjunto de estados do NFA que podem ser alcançados a partir do estado s do NFA apenas sobre $\epsilon$-transições
+* $\epsilon$-Closure(T) - conjunto de estados alcançáveis a partir de **qualquer estado do conjunto T** usando apenas $\epsilon$-transições.
+* move(T,a) - Conjunto de estados do NFA para os quais existe uma transição sob o símbolo de entrada a.
+
+```java
+while (exoste i, estadp não marcado) 
+{
+	DTrans.addState(T);
+	for (cada simbolo de entrada x){
+		U = eClosure(move(T,x));
+		if (u not in dataset)
+			Inclui u como estado não marcado em DStates
+		Dtran(T, x) = u;
+	}
+}
+```
+### Gerador de Analisador Léxico LEX
+Permite especificar um analisador léxico definindo expressões regulares na linguagem lex:
+	(programa fonte lex.l) --> Compilador LEX --> lex.yy.c
+#### Estrutura de programas LEX
+1. Declarações de variáveis, constantes e definições regulares
+2. Regras de tradução
+3. Funções auxiliares
+O LEX e  o analisador sintático devem estar em sintonia, pois ele chama o analisador léxico, que lê a entrada até encontrar o maior prefixo que case com um dos padrões.
+
