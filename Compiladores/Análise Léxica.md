@@ -127,7 +127,7 @@ Operações sobre estados do NFA:
 * move(T,a) - Conjunto de estados do NFA para os quais existe uma transição sob o símbolo de entrada a.
 
 ```java
-while (exoste i, estadp não marcado) 
+while (existe i, estado não marcado) 
 {
 	DTrans.addState(T);
 	for (cada simbolo de entrada x){
@@ -146,4 +146,23 @@ Permite especificar um analisador léxico definindo expressões regulares na lin
 2. Regras de tradução
 3. Funções auxiliares
 O LEX e  o analisador sintático devem estar em sintonia, pois ele chama o analisador léxico, que lê a entrada até encontrar o maior prefixo que case com um dos padrões.
-
+### Otimização de casadores de padrão
+Três algoritmos usados para implementar e otimizar casadores de padrão construídos a partir de expressões regulares.
+Para se construir um DFA diretamente de uma expressão regular, precisamos de alguns conceitos e funções.
+* Estados importantes
+* Árvores sintáticas
+* Funções calculadas a partir das árvores
+Um estado é dito ser importante se tiver uma transição saindo dele não $\epsilon$. Quando um NFA é construído pelo algoritmo, os únicos estados importantes são aqueles introduzidos como estados iniciais na parte da base para uma posição de símbolo específica.
+É conveniente mostrar a expressão regular através de uma árvore sintática, onde as folhas correspondem aos operandos e os nós interiores correspondem aos operadores.
+Construção de um DFA a partir de uma expressão regular (aumentada) necessita 4 funções:
+* **nullable(n)** - é verdadeira para determinado nó se e somente se a sub-expressão representada por $n$ tiver $\epsilon$ em sua linguagem.
+* **firstpos(n)** - é o conjunto de posições na sub-árvore com raiz em $n$ que corresponde ao primeiro símbolo de pelo menos uma cadeia válida na linguagem da sub-expressão cuja raiz é $n$.
+* **lastpos(n)** - é o conjunto de posições na sub-árvore com raiz em $n$ que corresponde ao último símbolo de pelo menos uma cadeia válida na linguagem.
+* **followpos(p)** - Recebe como entrada uma posição, é o conjunto das posições dos símbolos que pode vir imediatamente após a posição dada.
+#### Convertendo uma expressão regular diretamente para um DFA
+O algoritmo recebe como entrada uma expressão regular $r$ e retorna um DFA D que reconhece $L(r)$ 
+Método
+1. Construa uma arvore sintática $T$ a partir da expressão aumentada $(t)\#$.
+2. Calcule nullable, firstpos, lastpos e followpos para $T$.
+3. Construe Dstates, o conjunto de estados do DFA D, e Dtran, a função de transição dos estados de D.
+Será pedido na prova para gerar o grafo para o autômato.
