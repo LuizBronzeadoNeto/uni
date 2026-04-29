@@ -20,6 +20,16 @@ Determinam onde estão os diferentes valores de dados. O mais utilizado é o sis
 Quando cada eixo representa uma unidade distinta, é possível esticar ou comprimir sem retirar a validade dos dados (entretanto não é recomendado quando os eixos x e y possuem a mesma unidade de medida, as linhas da grade devem formar quadrados perfeitos).
 ##### Escalas de posição não lineares
 A mais comum é a escala logarítmica, muito útil com dados obtidos por meio de multiplicação ou divisão
-
-
-
+#### Escalas de cor
+Existem 3 casos de uso fundamentais para uso de cores:
+1) Distinguir grupos de dados
+2) Representar valores de dados
+3) Destacar dados
+Os tipos de cores e a maneira como são usadas variam em cada caso.
+##### Escala de cor qualitativa
+Usada para distinguir itens/grupos discretos entre si. Cores são escolhidas para parecerem distintas umas das outras, mas sendo equivalentes entre si. Além disso, nenhuma cor deve se destacar em relação a outra ou criar uma interpretação de ordem.
+##### Escala de cor quantitativa
+Para representar valores, a melhor escolha é a escala sequencial, que diferencia valores maiores/menores, ou próximos/distantes. A escala precisa variar uniformemente em toda a sua faixa.
+A escala também pode ser divergente, composta de 2 sequenciais unidas a um ponto médio comum.
+##### Escala de cor de destaque
+Escala de cor acentuada, usada para enfatizar elementos relevantes para a história contada. A escala precisa possuir um conjunto de cores suaves e outro contendo cores mais fortes para o destaque, não é recomendado que sejam do mesmo tom de cor (pode levar a confusão).
