@@ -49,7 +49,7 @@ Um alfabeto é qualquer conjunto finito de símbolos e uma cadeia é uma sequên
 Na análise léxica existem 3 operações fundamentais:
 * União: $$L \cup M = \{s|s \subset L \lor s \subset M\} $$
 * Concatenação
-* fecho de Kleene: $$ L^* = U_{i=0}^\inf L^i$$
+* fecho de Kleene: $$L^* = U_{i=0}^\inf L^i$$
 #### Expressões regulares
 Definem uma notação criada para descrever todas as linguagens que podem ser formadas a partir da aplicação de operadores fundamentais sobre os símbolos de um alfabeto
 
