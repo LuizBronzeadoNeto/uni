@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Análise Léxica.md",
+                "file": "Análise sintática.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Análise Léxica"
+              "title": "Análise sintática"
             }
           }
         ]
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Análise Léxica.md",
+                "file": "Análise sintática.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Análise Léxica"
+              "title": "Backlinks for Análise sintática"
             }
           },
           {
@@ -186,8 +186,9 @@
   },
   "active": "9b9bba0a888a8643",
   "lastOpenFiles": [
-    "Introdução.md",
     "Análise Léxica.md",
+    "Análise sintática.md",
+    "Introdução.md",
     "Pasted image 20260422111639.png",
     "Pasted image 20260422111459.png",
     "Pasted image 20260422111343.png",
