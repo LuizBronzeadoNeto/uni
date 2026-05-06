@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Perceptrons.md",
+                "file": "Deep neural networks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Perceptrons"
+              "title": "Deep neural networks"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e1ebe5766f9c898d",
@@ -186,6 +187,7 @@
   "active": "0c3e22c93ddc1fc1",
   "lastOpenFiles": [
     "Perceptrons.md",
-    "Intro to Neural Nets.md"
+    "Intro to Neural Nets.md",
+    "Deep neural networks.md"
   ]
 }
