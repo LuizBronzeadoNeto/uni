@@ -28,9 +28,25 @@ Uma linguagem que pode ser gerada por uma gramática é dita livre de contexto. 
 		E => -E => -(E) => -(E + E) => -(id + E) => -(id + id)
 **A análise sintática consiste em, a partir de uma cadeia de terminais, tentar descobrir como derivá-la a partir do símbolo inicial da gramática. Caso não possível, informar o(s) erros**
 ### Árvores de derivação
-Para ver o relacionamento entre derivações e árvores de derivação, considere as regras base e de indução a segur:
+Para ver o relacionamento entre derivações e árvores de derivação, considere as regras base e de indução a seguir:
 * Base: A árvore para $\alpha_1$ = A é um único nó rotulado como A
 * Indução: suponha que já tenhamos construído uma árvore de derivação com $a_{i - 1}$. Suponha que $\alpha_i$ seja derivado de $\alpha_{i-1} = X_1 ... X_j$, substituindo $X_j$ um não terminal, por $\beta$.
 Da esquerda para direita, as folhas de uma árvore formam o _resultado_ da árvore.
-
-
+### Ambiguidade
+Se duas árvores de derivação são possíveis para uma cadeia de uma gramática, essa gramática é considerada ambígua.
+Deve-se gerar gramáticas sem ambiguidade para compilar aplicações ou utilizar métodos para reduzir a ambiguidade, por exemplo: uma gramática para expressões aritméticas pode ser construída a partir de uma tabela mostrando associatividade entre operações:
+			expr --> expr + termo | termo
+			termo --> termo * fator | fator
+			fator --> id | (expr)
+Nesse caso, um fator é uma expressão que não pode ser desmembrado por um operador.
+Pode-se generalizar essa ideia para quaisquer n níveis de precedência. Para isso, precisamos de n + 1 não terminais; o primeiro, como fator, nunca pode ser desmembrado.
+### Recursão à esquerda
+Uma gramática possui recursão à esquerda se ela tiver um não-terminal A tal que exista uma derivação A => $\alpha$A para alguma cadeia $\alpha$.
+Os métodos de análise descendente não podem tratar esse tipo de gramática.
+* Recursão à esquerda imediata: A -> $\alpha$ | $\beta$
+* Pode-se resolver: A -> $\beta$A' onde A' é um novo não terminal A' -> $\alpha$A' | $\alpha$
+Esse procedimento elimina toda a recursão à esquerda das produções de A e A' (desde que nenhum $\alpha$ seja $\epsilon$), mas não a elimina para derivações em 2 ou mais passos.
+#### Fatoração à esquerda
+Nem sempre a escolha entre duas ou mais alternativas de produções é clara, a fatoração é a reescrita das produções para clarificar as alternativas.
+Em geral, se A -> $\alpha \beta_1$ | $\alpha\beta_2$ forem produções-A
+Para cada não terminal A, encontre o prefixo $\alpha$ mais longo, comum a duas ou mais regras,Se $\alpha \neq \epsilon$, substitua todas as produções A.
