@@ -23,5 +23,30 @@ Em cada iteração o algoritmo realiza duas fases:
 * Backwards (a rede ajusta seus pesos a partir de suas saídas)
 ### Regularização
 Regularização é qualquer modificação realizada para prevenir overfitting, sendo possível controlar a performance de um algoritmo (reduz o erro de teste, porém não o erro de treinamento).
-Exemplo, decaimento de pesos para problema da regressão$$j(w) = MSE_{train} + \lambda w^t w$$
+Exemplo, decaimento de pesos para problema da regressão:$$j(w) = MSE_{train} + \lambda w^t w$$
+#### Estratégias de regularização
+Restrições extras num modelo ML, como a adição de restrições rígidas (hard constraints) nos valores dos parâmetros.
+Penalidades na função objetiva (soft constraint).
+Se escolhidos com cuidado, essas restrições/penalidades podem levar a melhoras de performance no conjunto de teste, algumas vezes essas restrições codificam conhecimento a priori, em outras situações, ressas restrições expressam uma preferência genérica para um modelo mais simples a fim de promover generalização.
+Além disso, outras formas de regularização, conhecidas como métodos ensemble, combinam múltiplas hipóteses que explicam os dados de treinamento.
 
+Muitas abordagens de regularização são baseadas em limitar a capacidade de modelos adicionando um parâmetro de penalidade normalizada ($\Omega(\theta)$) a função objetiva $J$. Se denota a função objetiva por:$$\hat{J}(\theta; X, y) = J(\theta; X, y) + \alpha\Omega(\theta)) $$
+No aprendizado supervisionado, se atualiza $\theta$ por meio de um gradiente da função objetiva $\nabla J$.
+### Estimativas estatísticas
+#### Estimativas de ponto
+É uma tentativa de adquirir a melhor predição de uma propriedade verdade, porém desconhecida de um modelo usando dados de amostra $\{x^1, x^m\}$.
+Desse modo,  estimador de ponto pode ser definido como:$$\hat{\theta}_m = g(x^1, ..., x^m)$$
+#### Estimativas de função
+Tipos de estimação que predizem a relação entre entrada e saída de variáveis alvo.
+### Bias
+O viés mede o desvio esperado do valor verdadeira da estimativa $\theta$:$$bias(\hat{\theta}_m) = E[\hat{\theta}_m] - \theta$$
+Por outro lado, a variância mede o desvio do estimador esperado que qualquer dado amostral particular pode causar:$$Var(\hat{\theta}_m) = E[(\hat{\theta}_m - E[\hat{\theta}])²]$$
+Nessa linguagem, um modelo que sofre overfitting é um modelo que possui alta variância porém pequeno viés.
+### Maximum likelihood estimation
+A estimação máxima da verossimilhança é um método de estimar os parâmetros de um modelo estatístico:$$
+\begin{aligned}
+w_{ML} = arg_wmaxp_{model}(X;w) \\
+=arg_wmax \prod_i^mp_{model}(x^i;w) \\
+= arg_wmax \sum_i^mlog(p_{model}(x^i;w))
+\end{aligned}
+$$
