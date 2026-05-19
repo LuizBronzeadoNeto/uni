@@ -18,7 +18,7 @@ O ponto de partida para o algoritmo de backpropagation é obter a expressão de 
 		\end{aligned}
 		$$
 A partir desta ideia, fazendo manipulações matemáticas, obtemos a expressão de ajuste$$\delta_j(t)= \begin{cases} (d_j - y_j)f'(net), & node=output \\ (\sum_j \delta_iw_{ij})f'(net_j), & else \end{cases}$$
-Em cada iteração o algoritmo realiza duas fases:
+Em cada iteração o algoritmo realiza dua1s fases:
 * Foward (a rede gera suas saídas a partir de suas entradas)
 * Backwards (a rede ajusta seus pesos a partir de suas saídas)
 ### Regularização
