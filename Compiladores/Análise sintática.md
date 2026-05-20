@@ -44,7 +44,7 @@ Pode-se generalizar essa ideia para quaisquer n níveis de precedência. Para is
 Uma gramática possui recursão à esquerda se ela tiver um não-terminal A tal que exista uma derivação A => $\alpha$A para alguma cadeia $\alpha$.
 Os métodos de análise descendente não podem tratar esse tipo de gramática.
 * Recursão à esquerda imediata: A -> $\alpha$ | $\beta$
-* Pode-se resolver: A -> $\beta$A' onde A' é um novo não terminal A' -> $\alpha$A' | $\alpha$
+* Pode-se resolver: A -> $\beta$A' onde A' é um novo não terminal A' -> $\alpha$A' | $\epsilon$
 Esse procedimento elimina toda a recursão à esquerda das produções de A e A' (desde que nenhum $\alpha$ seja $\epsilon$), mas não a elimina para derivações em 2 ou mais passos.
 #### Fatoração à esquerda
 Nem sempre a escolha entre duas ou mais alternativas de produções é clara, a fatoração é a reescrita das produções para clarificar as alternativas.
@@ -74,5 +74,5 @@ Análise SLR (Simple LR) é o método mais simples que implementa o analisador S
 São indicações das regras de produção da gramática indicando em que momento está a análise, indicando se deve-se fazer um shift ou reduce.
 São representados por pontos antes de símbolos.
 Para construir uma coleção LR(0) para uma gramática, define-se: uma gramática estendida e as operações CLOSURE e GOTO.
-- **Closure**: Se I é um conjunto de itens em G, então CLOSURE(I) é o conjunto de itens construídos a partir de I acrescentando todo item de I em CLOSURE(I), se A -> $\alpha$B$\beta$ está em CLOSURE(I) e b -> $\gamma$, então adicione o item B -> .$\gamma$ em closure(I), se ele ainda não está lá.
-- **GOTO**: GOTO(I, X) onde I é um conjunto de itens e X é um símbolo da gramática, é definido com o o fechamento do conjunto de todos os itens $A \rightarrow \alpha X.\beta$  tais que estes itens estão em I.
+- **Closure**: Se I é um conjunto de itens em G, então CLOSURE(I) é o conjunto de itens construídos a partir de I acrescentando todo item de I em CLOSURE(I), se A -> $\alpha$B$\beta$ está em CLOSURE(I) e B -> $\gamma$, então adicione o item B -> .$\gamma$ em closure(I), se ele ainda não está lá.
+- **GOTO**: GOTO(I, X) onde I é um conjunto de itens e X é um símbolo da gramática, é definido com o o fechamento (closure) do conjunto de todos os itens $A \rightarrow \alpha X.\beta$  tais que estes itens estão em I.
