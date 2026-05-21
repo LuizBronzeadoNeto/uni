@@ -30,7 +30,7 @@ Penalidades na função objetiva (soft constraint).
 Se escolhidos com cuidado, essas restrições/penalidades podem levar a melhoras de performance no conjunto de teste, algumas vezes essas restrições codificam conhecimento a priori, em outras situações, ressas restrições expressam uma preferência genérica para um modelo mais simples a fim de promover generalização.
 Além disso, outras formas de regularização, conhecidas como métodos ensemble, combinam múltiplas hipóteses que explicam os dados de treinamento.
 
-Muitas abordagens de regularização são baseadas em limitar a capacidade de modelos adicionando um parâmetro de penalidade normalizada ($\Omega(\theta)$) a função objetiva $J$. Se denota a função objetiva por:$$\hat{J}(\theta; X, y) = J(\theta; X, y) + \alpha\Omega(\theta)) $$
+Muitas abordagens de regularização são baseadas em limitar a capacidade de modelos adicionando um parâmetro de penalidade normalizada ($\Omega(\theta)$) à função objetiva $J$ que mede uma estimativa sobre o erro que um modelo de aprendizagem de máquina $\theta$ comete sobre dados de treinamento X,y. Se denota a função objetiva por:$$\hat{J}(\theta; X, y) = J(\theta; X, y) + \alpha\Omega(\theta)) $$
 No aprendizado supervisionado, se atualiza $\theta$ por meio de um gradiente da função objetiva $\nabla J$.
 ### Estimativas estatísticas
 #### Estimativas de ponto
