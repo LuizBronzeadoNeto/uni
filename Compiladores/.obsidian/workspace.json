@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Análise Léxica.md",
+                "file": "Análise sintática.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Análise Léxica"
+              "title": "Análise sintática"
             }
           }
         ]
@@ -185,6 +185,7 @@
   },
   "active": "9b9bba0a888a8643",
   "lastOpenFiles": [
+    "Análise semântica.md",
     "Análise sintática.md",
     "Análise Léxica.md",
     "Introdução.md",

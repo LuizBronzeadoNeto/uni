@@ -30,7 +30,7 @@ Penalidades na função objetiva (soft constraint).
 Se escolhidos com cuidado, essas restrições/penalidades podem levar a melhoras de performance no conjunto de teste, algumas vezes essas restrições codificam conhecimento a priori, em outras situações, ressas restrições expressam uma preferência genérica para um modelo mais simples a fim de promover generalização.
 Além disso, outras formas de regularização, conhecidas como métodos ensemble, combinam múltiplas hipóteses que explicam os dados de treinamento.
 
-Muitas abordagens de regularização são baseadas em limitar a capacidade de modelos adicionando um parâmetro de penalidade normalizada ($\Omega(\theta)$) à função objetiva $J$ que mede uma estimativa sobre o erro que um modelo de aprendizagem de máquina $\theta$ comete sobre dados de treinamento X,y. Se denota a função objetiva por:$$\hat{J}(\theta; X, y) = J(\theta; X, y) + \alpha\Omega(\theta)) $$
+Muitas abordagens de regularização são baseadas em limitar a capacidade de modelos adicionando um parâmetro de penalidade normalizada ($\Omega(\theta)$) à função objetiva $J$ que mede uma estimativa sobre o erro que um modelo de aprendizagem de máquina com parâmetros $\theta$ comete sobre dados de treinamento X,y. Se denota a função objetiva por:$$\hat{J}(\theta; X, y) = J(\theta; X, y) + \alpha\Omega(\theta)) $$
 No aprendizado supervisionado, se atualiza $\theta$ por meio de um gradiente da função objetiva $\nabla J$.
 ### Estimativas estatísticas
 #### Estimativas de ponto
@@ -50,3 +50,27 @@ w_{ML} = arg_wmaxp_{model}(X;w) \\
 = arg_wmax \sum_i^mlog(p_{model}(x^i;w))
 \end{aligned}
 $$
+### pseudo-código para backpropagation
+```C#
+initialize all conections with random values
+do{
+	float error = 0;
+	foreach (training_pair in (X, d))
+	{
+		for (int layer = 1; layer <= N; layer++){
+			foreach (int neuron = 1; neuron <= M_k; neuron++)
+				//Compute output y_jk
+		}
+	}
+	if (error > epsilon)
+	{
+		foreach (layer N to 1){
+			foreach(neuron N to 1){
+				//update weights
+			}
+		}
+	}
+	
+}while (error >= epsilon) //até erro ser menor que epsilon
+```
+A segunda metade do código é basicamente a primeira em reverso, sendo a primeira a fase Forward e a a segunda a backward
