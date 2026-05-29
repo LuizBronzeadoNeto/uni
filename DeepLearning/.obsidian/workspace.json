@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e1ebe5766f9c898d",
@@ -186,8 +187,8 @@
   "active": "0c3e22c93ddc1fc1",
   "lastOpenFiles": [
     "Deep neural networks.md",
-    "Tipos de redes.md",
     "Intro to Neural Nets.md",
+    "Tipos de redes.md",
     "Perceptrons.md"
   ]
 }
