@@ -64,3 +64,9 @@ Isso previne que a magnitude de pesos individuais diminua com $m$ e ajuda a adqu
 Otimiza redes neurais profundas, porém não é um algoritmo de otimização, mas sim um método de reparametrização adaptativa.
 ##### BN transformation
 Apenas normalizar cada entrada de uma camada pode mudar o que a camada pode representar. Para resolver isso, é preciso introduzir uma transformação linear para cada ativação.$$BN_{y, \beta} (x_{1...m}) = y \hat x_{1...m} + \beta$$
+### Redes convolucionais
+Para tarefas de alta-dimensionalidade, com grandes quantidades de dados de entradas, o uso de MLPs torna-se inviável.
+Redes convolucionais (CNN) permitem o processamento de grandes dados de entrada. São ideais para processar dados com topologia similar a uma grade, onde convolução é utilizada ao invés de uma multiplicação de matriz em pelo menos uma camada.
+Quando a entrada muda, a saída muda da mesma forma, por exemplo,$$I(x,y) = I)(x-1,y)$$
+Se M for uma máscara convolucional e $\odot$ a operação convolucional:
+$$ M \odot I' = I'(M \odot I)$$
