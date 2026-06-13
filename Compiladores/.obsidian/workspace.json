@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Análise sintática.md",
+                "file": "Geração de código intermediário.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Análise sintática"
+              "title": "Geração de código intermediário"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Análise sintática.md",
+                "file": "Geração de código intermediário.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Análise sintática"
+              "title": "Backlinks for Geração de código intermediário"
             }
           },
           {
@@ -185,13 +185,14 @@
   },
   "active": "9b9bba0a888a8643",
   "lastOpenFiles": [
-    "Análise semântica.md",
+    "Geração de código intermediário.md",
     "Análise sintática.md",
+    "Pasted image 20260422111343.png",
+    "Análise semântica.md",
     "Análise Léxica.md",
     "Introdução.md",
     "Pasted image 20260422111639.png",
     "Pasted image 20260422111459.png",
-    "Pasted image 20260422111343.png",
     "Pasted image 20260415112602.png",
     "Pasted image 20260415112228.png",
     "2026-04-15.md",

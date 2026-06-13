@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Proporções.md",
+                "file": "Volumes e distribuições.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Proporções"
+              "title": "Volumes e distribuições"
             }
           }
         ]
@@ -185,8 +185,8 @@
   },
   "active": "5a25b70a7a30c54b",
   "lastOpenFiles": [
-    "Introdução.md",
     "Proporções.md",
+    "Introdução.md",
     "Volumes e distribuições.md",
     "Tipos de Dados.md"
   ]
