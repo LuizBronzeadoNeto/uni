@@ -11,6 +11,4 @@ Uma instrução pode ser uma atribuição, uma cópia, um desvio incondicional (
 base + I * W
 Para duas dimensões $$\text{base} + i_1w_1 +i_2w_2$$ Onde $w_1$ é a largura de uma linha e $w_2$ é a largura de um elemento de uma linha.
 Desse modo, para n dimensões$$\text{base} + i_1w_1+...+i_nw_n$$
-
-
-
+### Tradução de expressões

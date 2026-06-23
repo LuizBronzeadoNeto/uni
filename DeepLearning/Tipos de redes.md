@@ -8,13 +8,16 @@ A expectativa é tomada sobre a verdadeira distribuição de dados.
 * Se a distribuição verdadeira é desconhecida, mas um conjunto de amostras de treinamento é conhecida -> problema de machine learning
 Um problema de machine learning pode ser convertido de volta para um problema de otimização, minimizando a loss esperada no conjunto de treinamento (risco empírico)
 ### Surrogate Loss function
-Uma fumção de perda relevante as vezes não pode ser otimizada de forma eficiente. A solução é otimizar uma surrogate loss function que age como um proxy, mas tem suas vantagens.
+Uma função de perda relevante as vezes não pode ser otimizada de forma eficiente. A solução é otimizar uma surrogate loss function que age como um proxy, que tem suas vantagens, permitindo o modelo estimar a probabilidade condicional das classes.
 #### Funções
 - $\text{NLL} = \sum -log(y_i)$
+Devido ao formato do gráfico do logaritmo, ao negar o resultado do $log(y_i)$. Classificações errôneas ($\text{Loss} \rightarrow \infty$) serão penalizadas fortemente.
 #### Algoritmos de minibatch
 Otimização é iterativa em ML. Usando um conjunto de treinamento grande para toda iteração é computacionalmente inviável.
 Algoritmos de minibatch utilizam, como o nome indica, apenas b exemplos em cada iteração onde $1 \leq b < m$.
 Cada iteração pode ter baixa performance em relação à o batch completo, porém após múltiplas iterações, a performance torna-se comparável.
+São eficientes em comparação ao full batch pois o erro padrão da média é computado por:$$\frac{\sigma}{\sqrt{n}}$$ Mostrando que os retornos são menos que lineares quanto mais exemplos.
+
 ### Saddle point
 Para muitas funções não convexas de alta dimensionalidade, mínimos locais são casos raros. Mínimos locais devem satisfazer:$$
 \begin{aligned}
@@ -30,7 +33,7 @@ Gradiente: $$\hat{g} \leftarrow \frac{1}{m}V_0 \sum_i^m L(f(x^{(i)}; \theta) y^{
 ##### Momentum
 Projetado para acelerar o aprendizado, acumula uma média móvel exponencialmente decadente de gradientes passados, continua a mover na direção da GD. No algoritmo a velocidade é acumulada $v_t \leftarrow \alpha v_{t-1} - \epsilon \hat{g}$ e a atualização é aplicada: $$\theta \leftarrow \theta + v_t$$
 A ideia é atualizar mais rapidamente quando o gradiente é maior e menos quando o gradiente é pequeno.
-##### Gradientes adpaptativos (AdaGrad)
+##### Gradientes adaptativos (AdaGrad)
 SGD modificado com uma taxa de aprendizado por parâmetro (lr), lr aumenta em parâmetros com gradiente pequenos, e decresce em parâmentros com gradientes largos
 Gradientes quadrados acumulados: $$r \leftarrow r + g \odot g$$
 aplicar atualização:$$\theta \leftarrow \theta -\frac{\epsilon}{\delta + \sqrt{r}}\odot g$$
@@ -61,7 +64,7 @@ Pode levar a pesos pequenos caso a camada for grande.
 Cada unidade é inicializada para ter exatamente $k < m$ pesos não zero.
 Isso previne que a magnitude de pesos individuais diminua com $m$ e ajuda a adquirir mais diversidade.
 #### Batch normalization
-Otimiza redes neurais profundas, porém não é um algoritmo de otimização, mas sim um método de reparametrização adaptativa.
+Otimiza redes neurais profundas, porém não é um algoritmo de otimização, mas sim um método de reparametrização adaptativa. Soluciona desvio covariado. Normalizando a entrada de cada camada dado o minibatch.
 ##### BN transformation
 Apenas normalizar cada entrada de uma camada pode mudar o que a camada pode representar. Para resolver isso, é preciso introduzir uma transformação linear para cada ativação.$$BN_{y, \beta} (x_{1...m}) = y \hat x_{1...m} + \beta$$
 ### Redes convolucionais
