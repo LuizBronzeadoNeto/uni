@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tipos de redes.md",
+                "file": "Unsupervised Learning.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tipos de redes"
+              "title": "Unsupervised Learning"
             }
           }
         ]
@@ -185,9 +185,10 @@
   },
   "active": "0c3e22c93ddc1fc1",
   "lastOpenFiles": [
+    "Tipos de redes.md",
+    "Unsupervised Learning.md",
     "Perceptrons.md",
     "Intro to Neural Nets.md",
-    "Tipos de redes.md",
     "Deep neural networks.md",
     "Revisão prova 2.md"
   ]

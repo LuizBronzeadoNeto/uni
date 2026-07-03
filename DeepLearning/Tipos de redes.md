@@ -6,6 +6,14 @@ $$J^*(\theta) = E_{(x,y) P_{data}}L(f(x;\theta),y)$$
 A expectativa é tomada sobre a verdadeira distribuição de dados.
 * Se ela é conhecida -> problema de otimização
 * Se a distribuição verdadeira é desconhecida, mas um conjunto de amostras de treinamento é conhecida -> problema de machine learning
+
+
+
+
+
+
+
+
 Um problema de machine learning pode ser convertido de volta para um problema de otimização, minimizando a loss esperada no conjunto de treinamento (risco empírico)
 ### Surrogate Loss function
 Uma função de perda relevante as vezes não pode ser otimizada de forma eficiente. A solução é otimizar uma surrogate loss function que age como um proxy, que tem suas vantagens, permitindo o modelo estimar a probabilidade condicional das classes.
