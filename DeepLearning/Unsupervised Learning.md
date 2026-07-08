@@ -14,3 +14,6 @@ O mapeamento entre variáveis observadas e latentes pode ser em ambas as direç�
 Aprendem a gerar exemplos x levando como base representações latentes z. Conforme o treinamento progride, os exemplos gerados passam a ficar cada vez menos distinguíveis de exemplos reais.
 Duas redes são treinadas, um gerador, que gera as amostras, e um discriminador, cuja tarefa é distinguir objetos reais de objetos gerados pela rede geradora.
 
+### Variational Autoencoders
+Diferente de autoencoders tradicionais, autoencoders variacionais possuem uma propriedade adicional no espaço latente, a Completude. Ou seja, qualquer ponto amostrado do espaço latente deve produzir conteúdo significativo quando decodificado.
+
