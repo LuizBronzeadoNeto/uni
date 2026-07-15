@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Otimização.md",
+                "file": "Código Objeto.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Otimização"
+              "title": "Código Objeto"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "0e8dcec70355ee94",
@@ -185,12 +186,13 @@
   },
   "active": "9b9bba0a888a8643",
   "lastOpenFiles": [
-    "Geração de código intermediário.md",
     "Otimização.md",
+    "Código Objeto.md",
+    "Análise Léxica.md",
+    "Geração de código intermediário.md",
     "Análise sintática.md",
     "Pasted image 20260422111343.png",
     "Análise semântica.md",
-    "Análise Léxica.md",
     "Introdução.md",
     "Pasted image 20260422111639.png",
     "Pasted image 20260422111459.png",

@@ -9,3 +9,8 @@ Os blocos básicos formam nós em um grafo de fluxo.
 3. Qualquer instrução que siga imediatamente um desvio é líder
 ### Grafo de Fluxo
 Depois de particionar a RI em blocos básicos, representa-se o fluxo de controle entre eles através de um grafo.
+
+### Otimização Local
+Pode-se melhorar o código gerado realizando uma otimização local dentro de cada bloco básico. Técnicas importantes para otimização local começam transformando um bloco básico em um DAG.
+
+
