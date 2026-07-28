@@ -30,3 +30,28 @@ Modos de endereçamento:
 - Nome (x)
 - Endereço indexado (x(r)) onde x(r) = conteúdo(a + conteúdo(r))
 - Inteiro indexado por registrador (`LD R1, 100(R2)`)
+### Custos de Programa e Instrução
+Associar custos à compilação do programa.
+Cada instrução possui um custo associado:$$C = 1 + C_\text{modo de endr}$$
+```
+x = a[i] + 1
+
+100: MULT R2, i, #4
+108: ADD R3, a(R2), #1
+116: ST x, R3
+
+x = a[i] + b[j]
+
+100: MULT R2, i, #4
+108: MULT R3, j, #4
+116: ADD R4, a(R2), b(R3)
+124: ST x, R4
+
+a[i] = x - 1
+
+
+100: MULT R2, i, #4
+108: SUB R3, x, #1
+116: ST a(R2), R3
+
+```
