@@ -52,7 +52,7 @@ w_{ML} = arg_wmaxp_{model}(X;w) \\
 $$
 ### pseudo-código para backpropagation
 ```C#
-initialize all conections with random values
+//initialize all conections with random values
 do{
 	float error = 0;
 	foreach (training_pair in (X, d))
@@ -71,6 +71,6 @@ do{
 		}
 	}
 	
-}while (error >= epsilon) //até erro ser menor que epsilon
+}while (error >= epsilon)
 ```
 A segunda metade do código é basicamente a primeira em reverso, sendo a primeira a fase Forward e a a segunda a backward
