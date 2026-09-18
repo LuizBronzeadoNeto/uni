@@ -32,3 +32,13 @@ Foi deprecado por problemas diversos, como a complexidade da implementação, a 
 ##### AES-CTR
 Gera um fluxo contínuo de bytes pseudoaleatórios e combina-os com a entrada. O vetor de inicialização (aqui um nonce) quebra os padrões.
 
+### Criptografia Assimétrica
+O uso de duas chaves tem um grande impacto nas áreas de confidencialidade. A criptografia assimétrica foi o primeiro avanço realmente revolucionário, sendo baseada em operações matemáticas e não em operações de bits.
+Ex.: A criptografia é realizada com a chave pública, enquanto os dados podem ser descriptografados apenas com a chave privada.
+#### Propriedades desejadas
+Deve ser fácil criar os pares de chaves e (des)criptografar mensagens. Por outro lado, deve ser difícil que adversários que tenham chave pública derivem a chave privada (muito menos a mensagem original).
+Melhor ainda se ambas as chaves possam ser usadas para ambos os processos.
+#### Troca de chaves
+A criptografia assimétrica é um processo caro computacionalmente, para resolver esse problema, existem alguns algoritmos que usam criptografia assimétrica para combinar uma chave simétrica (que é a chave usada para criptografar os dados).
+Um desses algoritmos é o algoritmo Diffie-Hellman.
+
