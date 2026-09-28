@@ -1,4 +1,4 @@
-Para garantir a integridade, segurança, privacidade etc. Se usa mecanismos de segurança como criptografia, autenticação, monitoramento, etc.
+zPara garantir a integridade, segurança, privacidade etc. Se usa mecanismos de segurança como criptografia, autenticação, monitoramento, etc.
 ### Onde implementar Mecanismos
 Princípio e2e: depender de uma camada intermediária para uma garantia que somente os extremos conseguem verificar completamente. Aplicações tomam conta de sua segurança, reduzindo TCB (tudo aquilo que precisa ser confiado para a aplicação funcionar).
 Esse princípio não reduz a necessidade de defesa em profundidade.

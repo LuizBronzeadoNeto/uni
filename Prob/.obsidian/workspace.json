@@ -1,24 +1,24 @@
 {
   "main": {
-    "id": "a404290bfcab6ee2",
+    "id": "e2d97b6f139b0ec9",
     "type": "split",
     "children": [
       {
-        "id": "e723d38f426c9fae",
+        "id": "f7c2f1b56cdfa03c",
         "type": "tabs",
         "children": [
           {
-            "id": "a9039c6578ca0f6e",
+            "id": "48b9e1f9677c7170",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mecanismos de Segurança.md",
+                "file": "Probability and Counting.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Mecanismos de Segurança"
+              "title": "Probability and Counting"
             }
           }
         ]
@@ -27,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "8b939ad1b6f3dfed",
+    "id": "34faba19033b3a85",
     "type": "split",
     "children": [
       {
-        "id": "369779efd101350e",
+        "id": "fe358f4876b97c0b",
         "type": "tabs",
         "children": [
           {
-            "id": "9d28ff736fa3525c",
+            "id": "397a5a765e1c7599",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -50,7 +50,7 @@
             }
           },
           {
-            "id": "7c4eb6d24bc87726",
+            "id": "6018f54d3d7c76c7",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -67,7 +67,7 @@
             }
           },
           {
-            "id": "d5f72e1f6856089b",
+            "id": "60d73abb9b9b4f2d",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -83,23 +83,24 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
-    "id": "6aca514d50338e23",
+    "id": "617182bf8eb6cd17",
     "type": "split",
     "children": [
       {
-        "id": "9a6b41b879aefc32",
+        "id": "142f6cea8336f406",
         "type": "tabs",
         "children": [
           {
-            "id": "1d1198101baa374e",
+            "id": "b66b11665c2e2517",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Welcome.md",
+                "file": "Probability and Counting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,12 +114,12 @@
             }
           },
           {
-            "id": "574e38c96976d69e",
+            "id": "61310cb5002ee07b",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Welcome.md",
+                "file": "Probability and Counting.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -127,7 +128,7 @@
             }
           },
           {
-            "id": "1e2316a46aa60b88",
+            "id": "00bdd655b1ca0d6f",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -142,7 +143,7 @@
             }
           },
           {
-            "id": "e8e8ee9a83bdad72",
+            "id": "363ad8d20501d1b6",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -156,12 +157,12 @@
             }
           },
           {
-            "id": "ce014b1993ede4b6",
+            "id": "72b1c3cfddcf42cc",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Welcome.md",
+                "file": "Probability and Counting.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -188,10 +189,8 @@
       "bases:Create new base": false
     }
   },
-  "active": "a9039c6578ca0f6e",
+  "active": "48b9e1f9677c7170",
   "lastOpenFiles": [
-    "Definições e conceitos.md",
-    "Mecanismos de Segurança.md",
-    "Metd.md"
+    "Probability and Counting.md"
   ]
 }
