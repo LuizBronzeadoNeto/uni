@@ -28,4 +28,9 @@ A probability space consists of a sample space $S$ and a probability function $P
 1. $P(\emptyset) = 0, P(S) =1$ 
 2. if $A_1, A_2,...$ are disjoint events then: $$P(\bigcup_{j=1}^\infty A_j)=\sum_{j=1}^\infty P(A_j)$$
 	(That is to say the Probability of the arbitrary union of all pairwise disjoint subsets $A$ (mutually exclusive) of $S$ is equal to the sum of the probability of all subsets $A$)
+### Properties of probability
+For any events $A$ and $B$:
+1. $P(A^c) = 1 - P(A)$
+2. if $A \subseteq B$ then $P(A) \leq P(B)$
+3. $P(a \cup B) = P(A) + P(B) - P(A \cap B)$ 
 
