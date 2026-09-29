@@ -15,10 +15,17 @@ In many counting problems, it is not easy to directly count each possibility onc
 For any nonnegative integers $k$ and $n$, the binomial coefficient $\binom{n}{k}$ read as "$n$ choose $k$", is the number of subsets of size $k$ for a set of size $n$ (remember that a set of size $n$ will have $2^n$ subsets).
 ### Theorem 1.4.15 (binomial coefficient formula)
 For $k \leq n$ we have $$\binom{n}{k} = \frac{n(n-1) ... (n-k+1)}{k!}$$
-Notice we have the first $k$ factors of $n!$, to get the remaining ones, we multiply and divide by $(n-k)!$ $$\binom{n}{k} = \frac{n(n-1) ... (n-k+1)(n-k)(n-k-1)...1}{(n-k)!k!}$$
+Notice we have the first $k +1$ factors of $n!$, to get the remaining ones, we multiply and divide by $(n-k)!$ $$\binom{n}{k} = \frac{n(n-1) ... (n-k+1)(n-k)(n-k-1)...1}{(n-k)!k!}$$
 Therefore:
 $$\binom{n}{k} = \frac{n!}{(n-k)!k!}$$
 for $k > n$, we have $\binom{n}{k} = 0$
 Often however, the first expression in this theorem is better for calculation, as factorials grow extremely quickly.
 
+# Non-naive definition of probability
+Given the problems mentioned with the previous definition, it can only take us so far.
+### Definition 1.6.1 (General definition of probability)
+A probability space consists of a sample space $S$ and a probability function $P$ which takes an event $A \subseteq S$ as input and returns $P(A)$, a real number between 0 and 1, as output. $P$ must satisfy the following axioms:
+1. $P(\emptyset) = 0, P(S) =1$ 
+2. if $A_1, A_2,...$ are disjoint events then: $$P(\bigcup_{j=1}^\infty A_j)=\sum_{j=1}^\infty P(A_j)$$
+	(That is to say the Probability of the arbitrary union of all pairwise disjoint subsets $A$ (mutually exclusive) of $S$ is equal to the sum of the probability of all subsets $A$)
 
