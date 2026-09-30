@@ -1,4 +1,4 @@
-zPara garantir a integridade, segurança, privacidade etc. Se usa mecanismos de segurança como criptografia, autenticação, monitoramento, etc.
+Para garantir a integridade, segurança, privacidade etc. Se usa mecanismos de segurança como criptografia, autenticação, monitoramento, etc.
 ### Onde implementar Mecanismos
 Princípio e2e: depender de uma camada intermediária para uma garantia que somente os extremos conseguem verificar completamente. Aplicações tomam conta de sua segurança, reduzindo TCB (tudo aquilo que precisa ser confiado para a aplicação funcionar).
 Esse princípio não reduz a necessidade de defesa em profundidade.
@@ -41,4 +41,21 @@ Melhor ainda se ambas as chaves possam ser usadas para ambos os processos.
 #### Troca de chaves
 A criptografia assimétrica é um processo caro computacionalmente, para resolver esse problema, existem alguns algoritmos que usam criptografia assimétrica para combinar uma chave simétrica (que é a chave usada para criptografar os dados).
 Um desses algoritmos é o algoritmo Diffie-Hellman.
-
+### Algoritmos
+#### RSA
+Inventado em 1977, é uma cifra de bloco, texto plano e o cifrado são inteiros (entre 0 e m-1 mod m):
+$p=3,q=11$
+$n=pq, n=33$
+$$\phi(n)=mmc((p-1),(q-1)), \phi(n)=20$$ escolha um co-primo $e$ (ex: 7) e calcule d tal que:
+$$(de) \mod \phi(n)=1$$
+$d=3$
+$PR_k=(d,n) = (3, 33)$
+$PU_k=(e,n) = (7,33)$
+##### Computação homomórficas com RSA
+Permite que operações sejam feitas em cima de dados criptografados devido ao homomorfismo parcial (não inclui adição) presente no RSA.$$C(m_1m_2)=C(m_1)C(m_2)$$
+### Algoritmos pós-quânticos e híbridos
+NIST padronizou em agosto de 2024:
+* ML-KEM: encapsulamento de chaves (substitui X25519/RSA para troca de chaves)
+* ML-DSA: assinaturas digitais
+* SLH-DSA: assinaturas baseadas em hash
+Uma solução popular pela falta de maturidade do PQC é combinar 2 algoritmos.
