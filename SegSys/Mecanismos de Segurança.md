@@ -59,3 +59,18 @@ NIST padronizou em agosto de 2024:
 * ML-DSA: assinaturas digitais
 * SLH-DSA: assinaturas baseadas em hash
 Uma solução popular pela falta de maturidade do PQC é combinar 2 algoritmos.
+
+### Proteção de integridade
+Geralmente um hash
+Dado um Hash H:
+* $H$ pode ser aplicado a um bloco de qualquer tamanho
+* $H$ produz uma saída de calcular
+* $H(x)$ deve ser fácil de calcular
+* Para qualquer hash $h$, é inviável encontrar x a partir de $H(x)=h$
+* Para qualquer texto $x$, é inviável achar y != x que $H(x) = H(y)$
+* É inviável achar qualquer par $(x,y)$ tal que $H(x)=H(y)$ (resistência contra colisões)
+O hash é a impressão digital de qualquer ativo digital e não "pode" ser forjado
+#### Segredo de autenticação de mensagem
+O Hash é calculado com base na mensagem + segredo (k), desse modo, mesmo que a mensagem seja modificada e o hash recalculado, como k não é incluso no transporte, um atacante não saberá como calcular o hash corretamente e durante a comparação, é possível identificar modificação.
+O segredo também é incluso no início da mensagem, forçando qualquer atacante a recalcular o hash da mensagem inteira em cada tentativa (ao invés de só o final).
+Também funciona para criptografia assimétrica, com chaves públicas e privadas.
