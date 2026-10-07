@@ -31,7 +31,7 @@ A desvantagem desse modo é que devido ao encadeamento, não é possível parale
 Foi deprecado por problemas diversos, como a complexidade da implementação, a falta de proteção de integridade e vulnerabilidade contra ataques de padding.
 ##### AES-CTR
 Gera um fluxo contínuo de bytes pseudoaleatórios e combina-os com a entrada. O vetor de inicialização (aqui um nonce) quebra os padrões.
-
+Reusar os IVs e chaves no modo CTR é muito pior que antes, se você tem uma mensagem sobre a qual você conhece o texto plano e o cifrado, ao fazer or XOR da mensagem criptografada com texto plano os bits
 ### Criptografia Assimétrica
 O uso de duas chaves tem um grande impacto nas áreas de confidencialidade. A criptografia assimétrica foi o primeiro avanço realmente revolucionário, sendo baseada em operações matemáticas e não em operações de bits.
 Ex.: A criptografia é realizada com a chave pública, enquanto os dados podem ser descriptografados apenas com a chave privada.
@@ -74,3 +74,8 @@ O hash é a impressão digital de qualquer ativo digital e não "pode" ser forja
 O Hash é calculado com base na mensagem + segredo (k), desse modo, mesmo que a mensagem seja modificada e o hash recalculado, como k não é incluso no transporte, um atacante não saberá como calcular o hash corretamente e durante a comparação, é possível identificar modificação.
 O segredo também é incluso no início da mensagem, forçando qualquer atacante a recalcular o hash da mensagem inteira em cada tentativa (ao invés de só o final).
 Também funciona para criptografia assimétrica, com chaves públicas e privadas.
+
+#### Bloom filter
+Usa funções de hash para determinar posições de um vetor de bits ativadas, para cada elemento, o número de bits ativos será o número de funções hash utilizadas. Para testar a presença de um elemento, calcula-se os seus hashes, então se verifica se todos os bits estão ativos.
+### Criptografia e Perfect forward secrecy
+O uso de PKI permite que mesmo que os certificados sejam comprometidos, dados trocados entre clientes no passado não serão comprometidos.
