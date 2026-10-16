@@ -79,3 +79,37 @@ Também funciona para criptografia assimétrica, com chaves públicas e privadas
 Usa funções de hash para determinar posições de um vetor de bits ativadas, para cada elemento, o número de bits ativos será o número de funções hash utilizadas. Para testar a presença de um elemento, calcula-se os seus hashes, então se verifica se todos os bits estão ativos.
 ### Criptografia e Perfect forward secrecy
 O uso de PKI permite que mesmo que os certificados sejam comprometidos, dados trocados entre clientes no passado não serão comprometidos.
+### Blockchain
+Sistema de armazenamento de dados distribuídos, o nome vem da estratégia de encadear os blocos para dificultar ataques.
+Inserir um bloco é uma operação complexa. Reduz a concorrência e a lista converge para uma versão única, todos veem a mesma ordem dos blocos e torna-se robusta contra modificações. Essa estrutura permite responsabilização (auditabilidade).
+#### Limitações
+Boa para soluções com integridade e disponibilidade, mas não necessariamente para confidencialidade.
+Ineficiente para dados, o excesso de replicação gera custo. Usar uma blockchain pública é caro, mesmo para pequenos pedações de informação.
+#### Bloco
+Armazenamento de transações. A primeira transação é uma transação somente com destinatário, onde o minerador transfere moedas novas a si mesmo.
+Uma transação é uma transferência de valor entre conjuntos de origens e destinos.
+Os múltiplos endereços de entrada assinam a transação.
+Cada bloco tem o hash do anterior, formando a cadeia.
+#### Consenso
+Como fazer a rede concordar? Existem diversas soluções possíveis:
+* PoW
+* PoS
+* Acordo bizantino (todos se comunicam e decidem juntos)
+* PoET
+Qual usar depende do modelo de ameaças.
+#### Bifurcação
+O consenso não se espalha instantaneamente, caso haja conflito, o bloco que permanece será o da sequência mais longa (PoW mais longo).
+#### Carteiras
+A blockchain usa mecanismos de PUK e PK.
+A pública vira o seu endereço, a privada cria transações.
+Carteiras são o local de armazenamento dessas chaves.
+
+### Números aleatórios
+Existem problemas com números aleatórios para chaves e nonces.
+#### Requisitos de geradores
+* Distribuição uniforme
+* independência
+* impresivibilidade
+
+
+
