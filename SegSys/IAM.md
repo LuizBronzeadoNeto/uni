@@ -23,3 +23,10 @@ $Q$  :         verify $\{P,Q,n\}_k = m'$
 #### Ataques comuns
 * Força bruta
 * Tabelas de hash pré-calculadas (Rainbow Tables)
+
+### Autorização
+Nem toda entidade deve acessar todos os recursos. Uma vez identificado, ainda é preciso diferenciar.
+#### Formas comuns
+* MAC
+* DAC
+* RBAC
